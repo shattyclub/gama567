@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Jyotish Guru</title>
+<meta name="description" content="Jyotish Guru astrology app download karo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== COLORS: yahan se badlo ===== */
+  :root {
+    --bg: #111111;        /* page background */
+    --text: #ffffff;      /* heading / text color */
+    --btn-bg: #f5a623;    /* download button color */
+    --btn-text: #111111;  /* download button text color */
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    text-align: center;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Sab kuch ek hi centered column me, upar se niche */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  /* 1. TOP IMAGE (icon) */
+  .icon {
+    width: 140px;
+    height: 140px;
+    border-radius: 24px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* 2. HEADING */
+  .title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  /* 3. CONTENT */
+  .content {
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 640px;
+    line-height: 1.6;
+  }
+
+  /* 4. DOWNLOAD BUTTON */
+  .btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 8px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .btn:hover { opacity: .85; }
+  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  /* 5. CHAAR IMAGE BOXES (ek line me 4, mobile par 2x2) */
+  .gallery {
+    width: 100%;
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+  @media (max-width: 767px) {
+    .title { font-size: 1.9rem; }
+    .gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  }
+</style>
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- 1. TOP IMAGE: images/icon.jpeg -->
+    <img class="icon" src="images/icon.jpeg" alt="App icon">
+
+    <!-- 2. HEADING -->
+    <h1 class="title">JYOTISH GURU</h1>
+
+    <!-- 3. CONTENT -->
+    <p class="content">
+      Download the official Jyotish Guru app for free kundli, daily rashifal and expert astrologers.
+    </p>
+
+    <!-- 4. DOWNLOAD BUTTON: href me apna link daalo -->
+    <a class="btn" href="#" target="_blank" rel="noopener">↓ DOWNLOAD APP</a>
+
+    <!-- 5. CHAAR IMAGES: images/screen1.jpg ... screen4.jpg -->
+    <section class="gallery">
+      <img src="images/screen1.jpg" alt="App screenshot 1">
+      <img src="images/screen2.jpg" alt="App screenshot 2">
+      <img src="images/screen3.jpg" alt="App screenshot 3">
+      <img src="images/screen4.jpg" alt="App screenshot 4">
+    </section>
+
+  </main>
+</body>
+</html>
