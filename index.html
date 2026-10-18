@@ -118,54 +118,73 @@
     line-height: 1.5;
     text-decoration: none;
     box-shadow: 0 10px 22px rgba(152,9,42,.35);
+    /* NEW: button upar-niche hilta rahe */
+    animation: floatUpDown 1.5s ease-in-out infinite;
   }
   .btn:focus-visible { outline: 3px solid #000; outline-offset: 3px; }
+
+  /* NEW: upar-niche hilne wali animation */
+  @keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0);
+      box-shadow: 0 10px 22px rgba(152,9,42,.35);
+    }
+    50% {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 28px rgba(152,9,42,.25);
+    }
+  }
+
+  /* NEW: hover par button thoda bada ho jaye (animation chalti rahegi) */
+  .btn:hover {
+    scale: 1.05;
+  }
 
   /* 5. CHAAR BOXES */
   .cards {
     margin-top: 22px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;                  /* CHANGED: pehle 14px */
   }
   .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: 24px;
+    border-radius: 18px;        /* CHANGED: pehle 24px */
     box-shadow: 0 10px 26px rgba(150,40,40,.16);
-    padding: 16px 24px 16px;
+    padding: 10px 18px 10px;    /* CHANGED: pehle 16px 24px 16px */
     text-align: left;
     font-family: "Lexend", Arial, sans-serif;
   }
   .card-head {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 12px;
+    gap: 12px;                  /* CHANGED: pehle 14px */
+    margin-bottom: 6px;         /* CHANGED: pehle 12px */
   }
   .card-head .ic {
-    width: 26px;
-    height: 26px;
+    width: 22px;                /* CHANGED: pehle 26px */
+    height: 22px;               /* CHANGED: pehle 26px */
     flex: none;
     display: grid;
     place-items: center;
     color: var(--icon);
     fill: var(--icon);
     font-weight: 700;
-    font-size: 26px;
+    font-size: 22px;            /* CHANGED: pehle 26px */
     line-height: 1;
   }
-  .card-head .ic svg { width: 24px; height: 24px; fill: var(--icon); }
+  .card-head .ic svg { width: 20px; height: 20px; fill: var(--icon); }  /* CHANGED: pehle 24px */
   .card h3 {
     font-weight: 500;
-    font-size: 21px;
+    font-size: 17px;            /* CHANGED: pehle 21px */
     line-height: 1.3;
     color: var(--card-title);
   }
   .card p {
     font-weight: 400;
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 12px;            /* CHANGED: pehle 13px */
+    line-height: 1.4;           /* CHANGED: pehle 1.5 */
     color: var(--card-desc);
   }
 </style>
